@@ -5,11 +5,11 @@ help() {
   echo "  zmicro buildkit <args ...>"
   echo ""
 
-  buildkit --help
+  buildctl --help
 }
 
 version() {
-  buildkit --version
+  buildctl --version
 }
 
 core() {
@@ -20,8 +20,11 @@ core() {
   -v | --version | version)
     version
     ;;
+  server)
+    buildkitd "$@"
+    ;;
   *)
-    buildkit "$@"
+    buildctl "$@"
     ;;
   esac
 }
