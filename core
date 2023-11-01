@@ -33,6 +33,20 @@ install() {
   tar -zxvf $tmp_file >>/dev/null 2>&1
 
   # install
+  #
+  # bin
+  # ├── buildctl
+  # ├── buildkit-qemu-aarch64
+  # ├── buildkit-qemu-arm
+  # ├── buildkit-qemu-i386
+  # ├── buildkit-qemu-mips64
+  # ├── buildkit-qemu-mips64el
+  # ├── buildkit-qemu-ppc64le
+  # ├── buildkit-qemu-riscv64
+  # ├── buildkit-qemu-s390x
+  # ├── buildkit-runc
+  # └── buildkitd
+  #
   sudo cp -rf ./bin/* $usr_bin_dir
 
   # alias
